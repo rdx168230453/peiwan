@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='tabText'>
+      <view bindtap='indexTab' class="tab_item {{currentTab == '0'?'currentTab':''}}" data-index='0'>关注</view>
+      <view bindtap='indexTab' class="tab_item {{currentTab == '1'?'currentTab':''}}" data-index='1'>推荐</view>
+      <view bindtap='indexTab' class="tab_item {{currentTab == '2'?'currentTab':''}}" data-index='2'>附近</view>
+    </view>
+    <view class="indexSearch boxMarginTop">
+      <input placeholder="搜索游戏名，昵称，ID号" auto-focus />
+    </view>
+    <view class='classify_box boxMarginTop'>
+      <view>lol</view>
+      <view>王者荣耀</view>
+      <view>刺激战场</view>
+      <view>查看更多</view>
+    </view>
+    <swiper class='tabSwiper boxMarginTop' autoplay="{{false}}" duration="{{duration}}" bindchange='tabSwiperChange'
+    current="{{currentTab}}"
+    >
+      <block >
+        <swiper-item >
+          1
+        </swiper-item>
+      </block>
+       <block >
+        <swiper-item >
+          <view class='pw_body_box'>
+            <view class='index_list_item'>
+              <view class='item_showImg'><image src='./../../imgs/mes.jpg'></image></view>
+              <view class='item_info_box'>
+                <view class='item_info_title'>元旦而已。元旦而。</view>
+                <view class='item_info_tag'>lol<view class='info_tag_rmb'>15元/半小时</view></view>
+                <view class='item_info_data'>
+                    <view class='info_data_style'>
+                      <image class='smallHeadImg' src='./../../imgs/mes.jpg'></image>
+                      <view class='info_name'>没必要较真</view>
+                    </view>
+                    <view class='info_data_style'>
+                      <image class='data_save' src='./../../imgs/mes.jpg'></image>
+                      <view class='data_save_num'>2555</view>
+                    </view>
+                </view>
+              </view>
+            </view>
+            <view class='index_list_item'>
+              <view class='item_showImg'><image src='./../../imgs/ankatong.jpeg'></image></view>
+              <view class='item_info_box'>
+                <view class='item_info_title'>元旦而已。元。</view>
+                <view class='item_info_tag'>lol<view class='info_tag_rmb'>15元/半小时</view></view>
+                <view class='item_info_data'>
+                    <view class='info_data_style'>
+                      <image class='smallHeadImg' src='./../../imgs/mes.jpg'></image>
+                      <view class='info_name'>没必要较真</view>
+                    </view>
+                    <view class='info_data_style'>
+                      <image class='data_save' src='./../../imgs/mes.jpg'></image>
+                      <view class='data_save_num'>2555</view>
+                    </view>
+                </view>
+              </view>
+            </view>
+           
+          </view>
+        </swiper-item>
+      </block>
+       <block >
+        <swiper-item>
+          3
+        </swiper-item>
+      </block>
+    </swiper>
+</view>

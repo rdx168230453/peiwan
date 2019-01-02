@@ -1,0 +1,33 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+} 
+.boxMarginTop{
+  margin-top: 40rpx
+}
+.smallHeadImg{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 5px;
+}
+.hr{
+  border-bottom: 1px solid rgb(241, 240, 240);
+}
+.interval_box{
+  height: 20rpx;
+  background:#eee;
+}
+.icon_arrow{
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 10rpx;
+}
+.infoText{
+  color: rgb(150, 150, 150);
+}

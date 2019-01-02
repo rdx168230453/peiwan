@@ -1,0 +1,102 @@
+/**index.wxss**/
+
+.currentTab{
+  color: red
+}
+.tabText{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start
+}
+.tabText .tab_item{
+  margin-left: 20rpx;
+}
+.indexSearch{
+  width: 100%;
+}
+.indexSearch input{
+  padding:0px 20px;
+  height: 80rpx;
+  line-height: 80px;
+}
+.tabSwiper{
+  width: 100%;
+}
+.classify_box{
+  width:100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+.classify_box > view{
+  flex:1;
+  text-align: center;
+}
+.pw_body_box{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  padding:30rpx;
+  font-size:26rpx;
+}
+.index_list_item{
+  width: 335rpx;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #ccc;
+  border: 1px solid #ccc;
+  height: auto;
+  overflow: hidden;
+}
+.item_showImg{
+  width: 100%;
+  height: 300rpx;
+}
+.item_showImg image{
+  width: 100%;
+  height: 100%;
+}
+swiper{
+  height: 785rpx;
+}
+.item_info_box{
+  padding:20rpx;
+}
+.item_info_title{
+  line-height: 40rpx;
+}
+.item_info_tag{
+  margin-top: 20rpx;
+  border-radius: 30px;
+  background: rgb(255, 195, 195);
+  padding-left: 20rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+.info_tag_rmb{
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.item_info_data{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.info_data_style{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info_name,.data_save_num{
+  margin-left: 10rpx;
+}
+.info_name{
+  width: 100rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.data_save{
+  width: 30rpx;
+  height: 30rpx;
+}

@@ -1,0 +1,34 @@
+/* pages/my/index.wxss */
+.myIndex_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:20rpx 40rpx;
+}
+.userAvatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.myIndex_selfha_box{
+  display: flex;
+  justify-content: center;
+  padding:20rpx 40rpx;
+  font-size: 28rpx;
+}
+.myIndex_selfha_item{
+  flex: 1;
+  text-align: center;
+}
+.myIndex_info_skill{
+  padding:20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.myIndex_info_text{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: rgb(150, 150, 150);
+}

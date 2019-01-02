@@ -1,0 +1,25 @@
+<!--pages/my/skill/skill.wxml-->
+<view class='skill_box'>
+  <view>为了维护个人和大家的权益，请严格遵守规则</view>
+  <!-- <view>未开通资质</view> -->
+  <view class='skill_classify_box pagePad'>
+    <view>
+        <view class='skill_classify_tit'>热门</view>
+        <view class='skill_classify_tag'>
+          <view bindtap='tagItemToPage'>堡垒之夜<view class='tag_badge'>未审核</view></view>
+          <view>堡垒之夜<view  class='tag_badge'>未审核</view></view>
+          <view>堡垒之夜</view>
+          <view>堡垒之夜</view>
+          <view>堡垒之夜</view>
+        </view>
+    </view>
+    <view class='skill_classify_tit'>游戏</view>
+    <view class='skill_classify_tag'>
+      <view>堡垒之夜</view>
+      <view>堡垒之夜</view>
+      <view>堡垒之夜</view>
+      <view>堡垒之夜</view>
+      <view>堡垒之夜</view>
+    </view>
+  </view>
+</view>

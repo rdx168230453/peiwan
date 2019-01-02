@@ -1,0 +1,35 @@
+/* pages/my/skill/skill.wxss */
+.skill_classify_tit{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.skill_classify_tag{
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.skill_classify_tag > view{
+  margin-top: 20rpx;
+  border-radius: 2px;
+  background: #e9e8e8;
+  width: 150rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+.tag_badge{
+  position: absolute;
+  top: -15rpx;
+  right:-20rpx;
+  background:#a6caf8;
+  font-size: 22rpx;
+  border-radius: 5px;
+  padding: 2rpx 10rpx;
+  line-height: 30rpx;
+  z-index: 2;
+}
+/* 可能以后引用全局 */
+.pagePad{
+  padding:20rpx 40rpx;
+}
