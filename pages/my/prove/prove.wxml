@@ -1,2 +1,25 @@
 <!--pages/my/prove/prove.wxml-->
-<text>pages/my/prove/prove.wxml</text>
+<view class='provePage'>
+  <view class='provePage_box box_flex rank_box'>
+    <view>段位</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
+      <view class="picker">请选择{{array[index]}}</view>
+    </picker>
+  </view>
+  <view>
+    <view>
+      <view>上传资质图</view>
+      <view>上传资质图</view>
+    </view>
+    <view>截图清晰</view>
+    <view></view>
+  </view>
+  <view>
+    <view>语音介绍</view>
+  </view>
+  <view>
+    <view>技能介绍</view>
+    <view></view>
+  </view>
+  <view>提交</view>
+</view>

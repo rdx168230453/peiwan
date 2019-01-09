@@ -1,1 +1,23 @@
 /* pages/my/prove/prove.wxss */
+page{
+  height: 100%;
+}
+.provePage{
+  height: 100%;
+  background:#e9e9e9;
+  overflow: auto;
+}
+.provePage_box{
+  background: #fff;
+  margin-top: 40rpx;
+}
+.box_flex{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  align-items: center;
+}
+.rank_box{
+  height: 80rpx;
+  font-size:28rpx;
+}
