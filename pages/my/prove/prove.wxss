@@ -9,15 +9,28 @@ page{
 }
 .provePage_box{
   background: #fff;
-  margin-top: 40rpx;
+  margin-top: 20rpx;
 }
 .box_flex{
   display: flex;
-  justify-content: space-between;
+  justify-content:   space-between;
   padding: 0 20rpx;
   align-items: center;
 }
 .rank_box{
   height: 80rpx;
   font-size:28rpx;
+}
+.prvoPage_img_tit{
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  line-height: 80rpx;
+}
+.prvoPage_img_case{
+  color: #0278ff
+}
+.updataImg{
+  text-align: center;
 }

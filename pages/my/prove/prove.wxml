@@ -6,20 +6,23 @@
       <view class="picker">请选择{{array[index]}}</view>
     </picker>
   </view>
-  <view>
-    <view>
+  <view class='provePage_box'>
+    <view class='prvoPage_img_tit'>
       <view>上传资质图</view>
-      <view>上传资质图</view>
+      <view class='prvoPage_img_case'>资质图截图</view>
     </view>
-    <view>截图清晰</view>
+    <view class='updataImg'>上传图片</view>
     <view></view>
   </view>
-  <view>
-    <view>语音介绍</view>
+  <view class='provePage_box '>
+    <view class='prvoPage_img_tit'>语音介绍</view>
+    <view class='updataImg'>上传语音</view>
   </view>
-  <view>
+  <view class='provePage_box'>
     <view>技能介绍</view>
-    <view></view>
+    <view class="section">
+      <textarea bindblur="bindTextAreaBlur" auto-height placeholder="" />
+    </view>
   </view>
   <view>提交</view>
 </view>

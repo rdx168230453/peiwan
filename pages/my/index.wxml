@@ -19,4 +19,5 @@
     <view>认证技能</view>
     <view class='myIndex_info_text'>完成认证来赚钱<image class='icon_arrow' src='../../imgs/icon_jiantou.png'></image> </view>
   </view>
+  
 </view>
