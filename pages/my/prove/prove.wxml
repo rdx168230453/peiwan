@@ -11,12 +11,12 @@
       <view>上传资质图</view>
       <view class='prvoPage_img_case'>资质图截图</view>
     </view>
-    <view class='updataImg'>上传图片</view>
+    <view class='updataImg' bindtap='transferImgs'>上传图片</view>
     <view></view>
   </view>
   <view class='provePage_box '>
     <view class='prvoPage_img_tit'>语音介绍</view>
-    <view class='updataImg'>上传语音</view>
+    <view class='updataImg' bindtap='gitvoice'>上传语音</view>
   </view>
   <view class='provePage_box'>
     <view>技能介绍</view>

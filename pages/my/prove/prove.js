@@ -1,4 +1,5 @@
 // pages/my/prove/prove.js
+const getRecorderManager = wx.getRecorderManager()
 Page({
 
   /**
@@ -28,7 +29,27 @@ Page({
   onShow: function () {
 
   },
+  transferImgs(){
+    wx.chooseImage({
+      count:1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function(res) {
+        console.log(res)
+        const tempFilePaths = res.tempFilePaths
+      },
+      fail(res){
 
+      }
+    })
+  },
+  gitvoice(){
+    // const recorderManager = wx.getRecorderManager()
+    getRecorderManager.start({
+      duration: 5000,
+
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
