@@ -23,10 +23,10 @@
         </swiper-item>
       </block>
        <block >
-        <swiper-item >
+        <swiper-item class='pw_ctn_box'>
           <view class='pw_body_box'>
-            <view class='index_list_item'>
-              <view class='item_showImg'><image src='./../../imgs/mes.jpg'></image></view>
+            <view class='index_list_item' wx:for='{{listAry}}' wx:for-item="item" wx:for-index="index">
+              <view class='item_showImg'><image src='{{item.skillimg}}'></image></view>
               <view class='item_info_box'>
                 <view class='item_info_title'>元旦而已。元旦而。</view>
                 <view class='item_info_tag'>lol<view class='info_tag_rmb'>15元/半小时</view></view>
@@ -42,23 +42,7 @@
                 </view>
               </view>
             </view>
-            <view class='index_list_item'>
-              <view class='item_showImg'><image src='./../../imgs/ankatong.jpeg'></image></view>
-              <view class='item_info_box'>
-                <view class='item_info_title'>元旦而已。元。</view>
-                <view class='item_info_tag'>lol<view class='info_tag_rmb'>15元/半小时</view></view>
-                <view class='item_info_data'>
-                    <view class='info_data_style'>
-                      <image class='smallHeadImg' src='./../../imgs/mes.jpg'></image>
-                      <view class='info_name'>没必要较真</view>
-                    </view>
-                    <view class='info_data_style'>
-                      <image class='data_save' src='./../../imgs/mes.jpg'></image>
-                      <view class='data_save_num'>2555</view>
-                    </view>
-                </view>
-              </view>
-            </view>
+            
            
           </view>
         </swiper-item>

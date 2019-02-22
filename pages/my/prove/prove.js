@@ -1,12 +1,17 @@
 // pages/my/prove/prove.js
 const getRecorderManager = wx.getRecorderManager()
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    rankAry:['1','2']
+    rankAry: ['请选择', '王者', '宗师', '大师', '钻石', '白金'],
+    imageSrc:[],
+    voiceData:'',
+    rankVal:'',
+    index:0,
   },
 
   /**
@@ -29,25 +34,68 @@ Page({
   onShow: function () {
 
   },
+  bindPickerChange(e){
+    console.log(e.detail.value)
+    this.setData({
+      index:e.detail.value
+    })
+  },
   transferImgs(){
+    var that = this;
     wx.chooseImage({
       count:1,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success: function(res) {
-        console.log(res)
         const tempFilePaths = res.tempFilePaths
+        that.setData({
+          imageSrc:tempFilePaths
+        })
+        console.log(that.data.imageSrc)
       },
       fail(res){
 
       }
     })
   },
+  preview(){
+    const images = this.data.imageSrc
+    wx.previewImage({
+      current: images[0],  //当前预览的图片
+      urls: images,  //所有要预览的图片
+    })
+  },
   gitvoice(){
-    // const recorderManager = wx.getRecorderManager()
+    var that = this;
     getRecorderManager.start({
       duration: 5000,
-
+    })
+    getRecorderManager.onStop(function(res){
+      console.log(res.tempFilePath)
+      const tempFilePath = res.tempFilePath
+      that.setData({
+        voiceData: tempFilePath
+      })
+    })
+  },
+  sublimtData(){
+    //提交资料
+    var that = this;
+    console.log(that.data.imageSrc[0])
+    wx.request({
+      url: app.globalData.server + '/skillSubmit', // 仅为示例，并非真实的接口地址
+      method:'post',
+      data: {
+        id:'10000004',
+        type:'0',
+        ranking:'白金',
+        skillimg: that.data.imageSrc[0],
+        voiceintro:'http://voice',
+        textintro:'textIntor!!!',
+      },
+      success(res) {
+        console.log(res.data)
+      }
     })
   },
   /**

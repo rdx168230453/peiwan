@@ -5,9 +5,21 @@ const app = getApp()
 Page({
   data: {
     currentTab:'1',
-    duration:'500',// 动画时长
+    duration:'500',// 动画时长,
+    listAry:[]
   },
   onLoad: function () {
+    var that = this;
+    wx.request({
+      url: app.globalData.server + '/list', // 仅为示例，并非真实的接口地址
+      method: 'get',
+      success(res) {
+        console.log(res.data)
+        that.setData({
+          listAry:res.data.data
+        })
+      }
+    })
   },
   indexTab(e){
     //切换tab

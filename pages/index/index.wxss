@@ -21,6 +21,7 @@
 }
 .tabSwiper{
   width: 100%;
+  
 }
 .classify_box{
   width:100%;
@@ -95,6 +96,9 @@ swiper{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.pw_ctn_box{
+  height: auto !important;
 }
 .data_save{
   width: 30rpx;

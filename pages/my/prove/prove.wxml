@@ -3,7 +3,7 @@
   <view class='provePage_box box_flex rank_box'>
     <view>段位</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
-      <view class="picker">请选择{{array[index]}}</view>
+      <view class="picker">{{rankAry[index]}}</view>
     </picker>
   </view>
   <view class='provePage_box'>
@@ -12,7 +12,9 @@
       <view class='prvoPage_img_case'>资质图截图</view>
     </view>
     <view class='updataImg' bindtap='transferImgs'>上传图片</view>
-    <view></view>
+    <view wx:for="{{imageSrc}}" wx:for-item="item" wx:key="index">
+      <image class='smallImg' src='{{item}}' catchtap='preview'></image>
+    </view>
   </view>
   <view class='provePage_box '>
     <view class='prvoPage_img_tit'>语音介绍</view>
@@ -21,8 +23,8 @@
   <view class='provePage_box'>
     <view>技能介绍</view>
     <view class="section">
-      <textarea bindblur="bindTextAreaBlur" auto-height placeholder="" />
+      <textarea class='skillInfoText' placeholder="填写技能介绍" />
     </view>
   </view>
-  <view>提交</view>
-</view>
+  <view class='provePage_box skillSublimt' catchtap='sublimtData'>提交</view>
+</view> 

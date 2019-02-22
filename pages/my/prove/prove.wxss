@@ -34,3 +34,22 @@ page{
 .updataImg{
   text-align: center;
 }
+.smallImg{
+  width: 200rpx;
+  height: 200rpx;
+  border:1px solid #ccc;
+}
+.skillInfoText{
+  width: 95%;
+  height: 200rpx;
+  border: 1px solid #ccc;
+  margin: 20rpx auto 0 auto
+}
+.skillSublimt{
+  text-align: center;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #0278ff;
+  color: #fff;
+}

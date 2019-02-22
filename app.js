@@ -12,24 +12,24 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log(res.code)
-        wx.request({
-          method:'post',
-          url: that.globalData.server + 'login',
-          data:{
-            code:res.code
-          },
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success(res){
-            that.globalData.openid = res.data.openid
-            that.globalData.session_key = res.data.session_key
-            console.log(res.data)
-          },
-          fail(err){
-            console.log(err)
-          }
-        })
+        // wx.request({
+        //   method:'post',
+        //   url: that.globalData.server + 'login',
+        //   data:{
+        //     code:res.code
+        //   },
+        //   header: {
+        //     'content-type': 'application/json' // 默认值
+        //   },
+        //   success(res){
+        //     that.globalData.openid = res.data.openid
+        //     that.globalData.session_key = res.data.session_key
+        //     console.log(res.data)
+        //   },
+        //   fail(err){
+        //     console.log(err)
+        //   }
+        // })
       }
     })
     // 获取用户信息
