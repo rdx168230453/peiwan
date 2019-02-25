@@ -23,28 +23,36 @@
         </swiper-item>
       </block>
        <block >
-        <swiper-item class='pw_ctn_box'>
-          <view class='pw_body_box'>
-            <view class='index_list_item' wx:for='{{listAry}}' wx:for-item="item" wx:for-index="index">
-              <view class='item_showImg'><image src='{{item.skillimg}}'></image></view>
-              <view class='item_info_box'>
-                <view class='item_info_title'>元旦而已。元旦而。</view>
-                <view class='item_info_tag'>lol<view class='info_tag_rmb'>15元/半小时</view></view>
-                <view class='item_info_data'>
-                    <view class='info_data_style'>
-                      <image class='smallHeadImg' src='./../../imgs/mes.jpg'></image>
-                      <view class='info_name'>没必要较真</view>
-                    </view>
-                    <view class='info_data_style'>
-                      <image class='data_save' src='./../../imgs/mes.jpg'></image>
-                      <view class='data_save_num'>2555</view>
-                    </view>
+        <swiper-item>
+          <scroll-view
+            scroll-y
+            style="height:100%"
+            bindscrolltoupper="upper"
+            bindscrolltolower="lower"
+            bindscroll="scroll"
+            scroll-into-view="{{toView}}"
+            scroll-top="{{scrollTop}}"
+          >
+            <view class='pw_body_box'>
+              <view class='index_list_item' wx:for='{{listAry}}' wx:for-item="item" wx:for-index="index">
+                <view class='item_showImg'><image src='{{item.skillimg}}'></image></view>
+                <view class='item_info_box'>
+                  <view class='item_info_title'>标题</view>
+                  <view class='item_info_tag'>lol<view class='info_tag_rmb'>15元/半小时</view></view>
+                  <view class='item_info_data'>
+                      <view class='info_data_style'>
+                        <image class='smallHeadImg' src='./../../imgs/mes.jpg'></image>
+                        <view class='info_name'>没必要较真</view>
+                      </view>
+                      <view class='info_data_style'>
+                        <image class='data_save' src='./../../imgs/mes.jpg'></image>
+                        <view class='data_save_num'>2555</view>
+                      </view>
+                  </view>
                 </view>
               </view>
             </view>
-            
-           
-          </view>
+          </scroll-view>
         </swiper-item>
       </block>
        <block >

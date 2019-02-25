@@ -1,4 +1,4 @@
-// pages/my/introduce/introduce.js
+// pages/my/modifySkill/modifySkill.js
 Page({
 
   /**

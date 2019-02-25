@@ -4,9 +4,11 @@
     "pages/discover/index",
     "pages/message/index",
     "pages/my/index",
-    "pages/my/skill/skill",
-    "pages/my/prove/prove",
-    "pages/my/introduce/introduce"
+    "pages/my/skill/skill", 
+    "pages/my/prove/prove", 
+    "pages/my/receiptSet/receiptSet", 
+    "pages/my/modifySkill/modifySkill",
+    "pages/showDetail/showDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
