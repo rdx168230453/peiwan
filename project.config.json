@@ -12,7 +12,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.0",
+	"libVersion": "2.6.1",
 	"appid": "wx1d21ec5801a949a9",
 	"projectname": "peiwan-app",
 	"debugOptions": {
@@ -40,13 +40,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "skill",
+					"id": 0,
+					"name": "全部技能页面",
 					"pathName": "pages/my/skill/skill",
-					"query": ""
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": -1,
@@ -58,6 +59,13 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "接单设置",
+					"pathName": "pages/my/receiptSet/receiptSet",
 					"query": "",
 					"scene": null
 				}

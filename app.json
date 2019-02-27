@@ -8,12 +8,13 @@
     "pages/my/prove/prove", 
     "pages/my/receiptSet/receiptSet", 
     "pages/my/modifySkill/modifySkill",
+    "pages/my/okamiRule/okamiRule",
     "pages/showDetail/showDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "陪玩",
+    "navigationBarTitleText": "麦芽陪玩",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

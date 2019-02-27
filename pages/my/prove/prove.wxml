@@ -1,7 +1,7 @@
 <!--pages/my/prove/prove.wxml-->
 <view class='provePage'>
   <view class='provePage_box box_flex rank_box'>
-    <view>段位</view>
+    <view>段位提交</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
       <view class="picker">{{rankAry[index]}}</view>
     </picker>
@@ -11,19 +11,27 @@
       <view>上传资质图</view>
       <view class='prvoPage_img_case'>资质图截图</view>
     </view>
-    <view class='updataImg' bindtap='transferImgs'>上传图片</view>
-    <view wx:for="{{imageSrc}}" wx:for-item="item" wx:key="index">
-      <image class='smallImg' src='{{item}}' catchtap='preview'></image>
+    <view class='updataImg' bindtap='transferImgs'>
+      <view class='updateIcon' wx:if='{{!imageSrc[0]}}'>
+        <view class='introText'>上传你最优秀的资质图</view>
+        <image src='./../../../imgs/img-upload.png'></image>
+      </view>
+      <view wx:for="{{imageSrc}}" wx:for-item="item" wx:key="index">
+        <image class='smallImg' src='{{item}}'></image>
+      </view>
     </view>
   </view>
   <view class='provePage_box '>
     <view class='prvoPage_img_tit'>语音介绍</view>
-    <view class='updataImg' bindtap='gitvoice'>上传语音</view>
+    <view class='updateVoice' bindtap='gitvoice'>
+      <view class='introText'>上传语音</view>
+      <image src='./../../../imgs/luyin.png'></image>
+    </view>
   </view>
   <view class='provePage_box'>
-    <view>技能介绍</view>
+    <view class='prvoPage_img_tit'>技能介绍</view>
     <view class="section">
-      <textarea class='skillInfoText' placeholder="填写技能介绍" />
+      <textarea class='skillInfoText' placeholder-class='placeskillIntro' placeholder="填写技能介绍" bindblur='bindSetText'/>
     </view>
   </view>
   <view class='provePage_box skillSublimt' catchtap='sublimtData'>提交</view>

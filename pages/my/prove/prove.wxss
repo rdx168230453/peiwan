@@ -19,31 +19,57 @@ page{
 }
 .rank_box{
   height: 80rpx;
-  font-size:28rpx;
+  font-size:34rpx;
 }
 .prvoPage_img_tit{
   padding: 0 20rpx;
   display: flex;
   justify-content: space-between;
-  font-size: 28rpx;
+  font-size: 34rpx;
   line-height: 80rpx;
 }
 .prvoPage_img_case{
   color: #0278ff
 }
+.updateVoice image{
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx auto 0 auto
+}
+.updateIcon image{
+  margin-top: 10rpx;
+  width: 200rpx;
+  height: 160rpx;
+  transform: scale(0.8,0.8)
+}
+.introText{
+  font-size: 32rpx;
+}
 .updataImg{
+  text-align: center;
+}
+.updateVoice{
+  padding-bottom: 20rpx;
   text-align: center;
 }
 .smallImg{
   width: 200rpx;
   height: 200rpx;
-  border:1px solid #ccc;
+  display:block;
+  margin: 0 auto;
+}
+.section{
+  padding-bottom: 20rpx;
 }
 .skillInfoText{
-  width: 95%;
-  height: 200rpx;
+  width: 90%;
+  height: 170rpx;
+  /* text-indent: 20rpx; */
+  padding:10rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
   border: 1px solid #ccc;
-  margin: 20rpx auto 0 auto
+  margin:0 auto
 }
 .skillSublimt{
   text-align: center;
@@ -52,4 +78,9 @@ page{
   line-height: 100rpx;
   background: #0278ff;
   color: #fff;
+  margin-bottom: 20rpx;
 }
+.placeskillIntro{
+  font-size: 32rpx;
+}
+

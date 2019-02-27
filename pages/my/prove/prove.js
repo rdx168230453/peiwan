@@ -1,5 +1,5 @@
 // pages/my/prove/prove.js
-const getRecorderManager = wx.getRecorderManager()
+const recorderManager = wx.getRecorderManager();
 const app = getApp();
 Page({
 
@@ -12,6 +12,7 @@ Page({
     voiceData:'',
     rankVal:'',
     index:0,
+    skillIntro:''
   },
 
   /**
@@ -35,7 +36,6 @@ Page({
 
   },
   bindPickerChange(e){
-    console.log(e.detail.value)
     this.setData({
       index:e.detail.value
     })
@@ -51,7 +51,6 @@ Page({
         that.setData({
           imageSrc:tempFilePaths
         })
-        console.log(that.data.imageSrc)
       },
       fail(res){
 
@@ -67,21 +66,57 @@ Page({
   },
   gitvoice(){
     var that = this;
-    getRecorderManager.start({
+    //获取录音权限
+    wx.authorize({
+      scope: 'scope.record',
+      success(res) {
+      },
+      fail(res) {
+        wx.showModal({
+          title: '提示',
+          content: '需要使用你的录音功能',
+          success(res) {
+            if (res.confirm) {
+              wx.openSetting({
+                success(res) {
+                  res.authSetting = {
+                    "scope.userInfo": true,
+                    "scope.userLocation": true
+                  }
+                },
+                fail(res) {
+                  console.log(res)
+                }
+              })
+            }
+          }
+        })
+      }
+    })
+    //录音设置
+    recorderManager.start({
       duration: 5000,
     })
-    getRecorderManager.onStop(function(res){
+    recorderManager.onStart(function (res) {
+    })
+    recorderManager.onStop(function(res){
       console.log(res.tempFilePath)
       const tempFilePath = res.tempFilePath
       that.setData({
         voiceData: tempFilePath
       })
+    }) 
+  },
+  bindSetText(e){
+    this.setData({
+      skillIntro:e.detail.value
     })
   },
   sublimtData(){
     //提交资料
     var that = this;
-    console.log(that.data.imageSrc[0])
+    if (that.data.index !== 0 && that.data.imageSrc[0] == null && that.data.voiceData == null && 
+    that.data.skillIntro == null) return false
     wx.request({
       url: app.globalData.server + '/skillSubmit', // 仅为示例，并非真实的接口地址
       method:'post',

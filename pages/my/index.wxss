@@ -32,3 +32,13 @@
   font-size: 28rpx;
   color: rgb(150, 150, 150);
 }
+.myIndex_order_text{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+.myIndex_order_text .text_item{
+  padding: 40rpx 0;
+  flex: 1;
+  text-align: center
+}

@@ -1,2 +1,7 @@
-<!--pages/my/receiptSet/receiptSet.wxml-->
-<text>pages/my/receiptSet/receiptSet.wxml</text>
+<!--pages/my/receiptSet/receiptSet.wxml 接单设置-->
+<view class='receiptSetting'>
+  <view>
+    <view>英雄联盟</view>
+    <view>英雄联盟</view>
+  </view>
+</view>
