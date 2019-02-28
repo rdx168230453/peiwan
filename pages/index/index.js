@@ -38,6 +38,11 @@ Page({
       'currentTab': currentIndex
     })
   },
+  toDetail(){
+    wx.navigateTo({
+      url: '../showDetail/showDetail',
+    })
+  },
   onGotUserInfo(e){
     console.log(e.detail.userInfo)
   },

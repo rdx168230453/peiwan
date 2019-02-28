@@ -40,11 +40,11 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
-					"name": "全部技能页面",
+					"name": "技能选择",
 					"pathName": "pages/my/skill/skill",
 					"query": "",
 					"scene": null
@@ -66,6 +66,13 @@
 					"id": -1,
 					"name": "接单设置",
 					"pathName": "pages/my/receiptSet/receiptSet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情页",
+					"pathName": "pages/showDetail/showDetail",
 					"query": "",
 					"scene": null
 				}

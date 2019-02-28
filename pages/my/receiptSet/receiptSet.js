@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    unit:'',
+    showModel:true,
   },
 
   /**
@@ -14,7 +15,6 @@ Page({
   onLoad: function (options) {
 
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -28,7 +28,27 @@ Page({
   onShow: function () {
 
   },
-
+  cofirmUnit(e){
+    var query = wx.createSelectorQuery();
+    query.select('.unitPriceModel').boundingClientRect()
+    query.exec((res) => {
+      var height = res[0].height;
+      const animation = wx.createAnimation({
+        duration: 500,
+        timingFunction: 'ease',
+      })
+      animation.bottom(-height -1).opacity(0).step()
+      const animationDilog = wx.createAnimation({
+        duration: 500,
+        timingFunction: 'ease',
+      })
+      animationDilog.opacity(0).step();
+      this.setData({
+        animationData: animation.export(),
+        animationDilog: animationDilog
+      })
+    })
+  }, 
   /**
    * 生命周期函数--监听页面隐藏
    */

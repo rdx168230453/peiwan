@@ -1,2 +1,37 @@
-<!--pages/showDetail/showDetail.wxml-->
-<text>pages/showDetail/showDetail.wxml</text>
+<!--pages/showDetail/showDetail.wxml 内容详情页-->
+<view class='nav' style='height:{{navH}}px;background:{{navFade}}' >
+  <view class='nav-title'>
+    <image src='../../imgs/back.png' mode='aspectFit' class='back' bindtap='navBack'></image> 
+  </view>
+</view>
+<view class='hidden'>
+  <!-- 正文 --> 
+  <image class='personShow' src='./../../imgs/mes.jpg'></image>
+  <view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+    <view>12312</view>
+  </view>  
+</view>

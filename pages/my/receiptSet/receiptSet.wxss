@@ -1,1 +1,39 @@
 /* pages/my/receiptSet/receiptSet.wxss */
+page{
+  background: #e9e9e9;
+  height: 100%;
+}
+.setItemBox{
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+.setswitch{
+  transform: scale(0.7)
+}
+.listItemBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 34rpx;
+  height: 80rpx;
+}
+.mt20{
+  margin-top: 20px
+}
+.DialogBg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.4)
+}
+.unitPriceModel{
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  background: #fff;
+}

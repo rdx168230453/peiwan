@@ -1,6 +1,6 @@
 <!--pages/my/skill/skill.wxml-->
 <view class='skill_box'>
-  <view>为了维护个人和大家的权益，请严格遵守规则</view>
+  <view class='alterText'>为了维护个人和大家的权益，请严格遵守规则！</view>
   <!-- <view>未开通资质</view> -->
   <view class='skill_classify_box pagePad'>
     <view>

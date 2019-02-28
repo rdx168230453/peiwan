@@ -29,6 +29,13 @@
   line-height: 30rpx;
   z-index: 2;
 }
+.alterText{
+  background:#a6caf8;
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 70rpx;
+  text-align: center
+}
 /* 可能以后引用全局 */
 .pagePad{
   padding:20rpx 40rpx;

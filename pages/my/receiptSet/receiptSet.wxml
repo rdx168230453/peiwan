@@ -1,7 +1,55 @@
 <!--pages/my/receiptSet/receiptSet.wxml 接单设置-->
 <view class='receiptSetting'>
-  <view>
-    <view>英雄联盟</view>
-    <view>英雄联盟</view>
+  <view class='pickBox setItemBox'>
+    <view class='listItemBox'>
+      <view>英雄联盟</view>
+      <switch class='setswitch' checked bindchange="switch1Change" />
+    </view>
+    <view class='listItemBox'>
+      <view>单价/每次</view>
+      <view>10u</view>
+    </view>
   </view>
+  <view class='setItemBox listItemBox'>
+      <view>主接品类</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
+        <view class="picker">{{rankAry[index]}}</view>
+      </picker>
+    </view>
+  <view class='setItemBox'>
+    <view class='listItemBox'>
+      <view>抢单/派单</view>
+      <switch class='setswitch' checked bindchange="switch1Change" />
+    </view>
+    <view class='listItemBox'>
+      <view>时间</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
+        <view class="picker">{{rankAry[index]}}</view>
+      </picker>
+    </view>
+    <view class='listItemBox'>
+      <view>周期</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
+        <view class="picker">{{rankAry[index]}}</view>
+      </picker>
+    </view>
+  </view>
+  <!-- <view class='setItemBox listItemBox'>
+    <view>屏蔽未成功用户的消息</view>
+    <switch class='setswitch' checked bindchange="switch1Change" />
+  </view> -->
+  <view class='DialogBg' animation="{{animationDilog}}"></view>
+  <view class='unitPriceModel' animation="{{animationData}}">   
+    <view></view>
+    <view>
+      <view>10</view>
+      <view>20</view>
+      <view>30</view>
+      <view><input></input></view>
+    </view>
+    <view>
+      <view>实际单价10元</view>
+      <view catchtap='cofirmUnit'>确认</view>
+    </view>
+  </view> 
 </view>

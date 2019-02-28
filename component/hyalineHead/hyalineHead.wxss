@@ -1,8 +1,8 @@
-/* pages/showDetail/showDetail.wxss */
+/* component/hyalineHead/hyalineHead.wxss */
 .nav{
   width: 100%;
   overflow: hidden;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 10;
@@ -28,8 +28,11 @@
   left: 0;
   padding: 10px 15px;
 }
-.personShow{
-  width: 100%;
+.bg-white{
+  background-color: #ffffff;
+}
+.bg-gray{
+  background-color: #f7f7f7;
 }
 .overflow{
   overflow: auto;

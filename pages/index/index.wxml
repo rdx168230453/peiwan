@@ -34,7 +34,7 @@
             scroll-top="{{scrollTop}}"
           >
             <view class='pw_body_box'>
-              <view class='index_list_item' wx:for='{{listAry}}' wx:for-item="item" wx:for-index="index">
+              <view class='index_list_item' catchtap='toDetail' wx:for='{{listAry}}' wx:for-item="item" wx:for-index="index">
                 <view class='item_showImg'><image src='{{item.skillimg}}'></image></view>
                 <view class='item_info_box'>
                   <view class='item_info_title'>标题</view>

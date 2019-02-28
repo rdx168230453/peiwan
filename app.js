@@ -5,7 +5,15 @@ App({
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
-
+    //获取手机高度
+    wx.getSystemInfo({
+      success: res => {
+        //导航高度
+        this.globalData.navHeight = res.statusBarHeight + 46;
+      }, fail(err) {
+        console.log(err);
+      }
+    })
     var that = this
     // 登录
     wx.login({
@@ -58,5 +66,6 @@ App({
     appId:'wx1d21ec5801a949a9',
     secret:'0120cfe4a748562dcfcc30579283a7e3',
     server:'http://127.0.0.1:5051/app/',
+    navHeight:''
   }
 })
