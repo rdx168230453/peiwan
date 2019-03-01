@@ -31,9 +31,6 @@
 .personShow{
   width: 100%;
 }
-.overflow{
-  overflow: auto;
-}
 .hidden{
   overflow: hidden;
 }
