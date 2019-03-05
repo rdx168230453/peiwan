@@ -28,24 +28,51 @@ Page({
   onShow: function () {
 
   },
+  //选择单价
+  pickUnit(){
+    var query = wx.createSelectorQuery();
+    query.select('.unitPriceModel').boundingClientRect()
+    query.exec((res) => {
+      var height = res[0].height;
+      
+      const dialogBg = wx.createAnimation({
+        duration: 300,
+        timingFunction: 'ease',
+      })
+      dialogBg.top(0).step();
+      dialogBg.opacity(1).step();
+      const dialogCtn = wx.createAnimation({
+        delay:200,
+        duration: 500,
+        timingFunction: 'ease',
+      })
+      dialogCtn.bottom(0).opacity(1).step()
+      this.setData({
+        dialogBg: dialogBg.export(),
+        dialogCtn: dialogCtn.export()
+      })
+    })
+  },
+  //确认单价
   cofirmUnit(e){
     var query = wx.createSelectorQuery();
     query.select('.unitPriceModel').boundingClientRect()
     query.exec((res) => {
       var height = res[0].height;
-      const animation = wx.createAnimation({
+      const dialogCtn = wx.createAnimation({
         duration: 500,
         timingFunction: 'ease',
       })
-      animation.bottom(-height -1).opacity(0).step()
-      const animationDilog = wx.createAnimation({
+      dialogCtn.bottom(-height -1).opacity(0).step()
+      const dialogBg= wx.createAnimation({
         duration: 500,
         timingFunction: 'ease',
       })
-      animationDilog.opacity(0).step();
+      dialogBg.opacity(0).step();
+      dialogBg.top('100%').step();
       this.setData({
-        animationData: animation.export(),
-        animationDilog: animationDilog
+        dialogBg: dialogBg.export(),
+        dialogCtn: dialogCtn.export()
       })
     })
   }, 

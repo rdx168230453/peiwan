@@ -21,19 +21,79 @@ page{
 .mt20{
   margin-top: 20px
 }
+
+/* 弹窗 */
 .DialogBg{
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.4)
+  background: rgba(0, 0, 0, 0.4);
 }
 .unitPriceModel{
   width: 100%;
   position: absolute;
   z-index: 1000;
-  bottom: 0;
+  bottom: -50%;
+  left: 0;
   background: #fff;
+  font-size: 32rpx;
+}
+.pieceLayer{
+  padding: 0px 40rpx;
+}
+.unitPrice_title{
+
+  line-height: 80rpx;
+  margin-top: 20rpx;
+} 
+.priceList{
+  margin-top: 20rpx;
+  padding-bottom: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.priceList > view{
+  width: 20%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  background: #e1e1e1;
+  color: #a4a4a4
+}
+.priceList .select{
+  color: #fff;
+  background: #1c9bff;
+}
+.custom_price,.custom_discount{
+  width: 20%;
+  height: 60rpx;
+  background: #e1e1e1;
+  border-radius: 10rpx;
+  text-align: center;
+}
+.lastShowPrice{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #f5f5f5;
+}
+.lastPrice{
+  padding-left: 40rpx;
+}
+.lastPrice > .bright{
+  display: inline-block;
+  margin-left: 10rpx;
+  color: #1c9bff;
+  font-size: 34rpx;
+}
+.cofirmUnit{
+  width: 40%;
+  background: #1c9bff;
+  text-align: center;
+  color: #fff;
 }

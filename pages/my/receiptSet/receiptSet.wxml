@@ -7,7 +7,7 @@
     </view>
     <view class='listItemBox'>
       <view>单价/每次</view>
-      <view>10u</view>
+      <view catchtap='pickUnit'>10u</view>
     </view>
   </view>
   <view class='setItemBox listItemBox'>
@@ -38,18 +38,31 @@
     <view>屏蔽未成功用户的消息</view>
     <switch class='setswitch' checked bindchange="switch1Change" />
   </view> -->
-  <view class='DialogBg' animation="{{animationDilog}}"></view>
-  <view class='unitPriceModel' animation="{{animationData}}">   
-    <view></view>
-    <view>
-      <view>10</view>
-      <view>20</view>
-      <view>30</view>
-      <view><input></input></view>
+  <!-- 弹窗 -->
+  <view class='DialogBg' animation="{{dialogBg}}"></view>
+  <view class='unitPriceModel' animation="{{dialogCtn}}">   
+    <view class='pieceLayer'>
+      <view class='unitPrice_title'>价格</view>
+      <view class='priceList'>
+        <view class='select'>10</view>
+        <view>20</view>
+        <view>30</view>
+        <input class='custom_price' placeholder='自定义'></input>
+      </view>
     </view>
-    <view>
-      <view>实际单价10元</view>
-      <view catchtap='cofirmUnit'>确认</view>
+    <view class='hr'></view>  
+    <view class='pieceLayer'>
+      <view class='unitPrice_title'>优惠折扣</view>
+      <view class='priceList'>
+        <view class='select'>无折扣</view>
+        <view>20</view>
+        <view>30</view>
+        <input class='custom_discount' placeholder='自定义'></input>
+      </view>
+    </view>
+    <view class='lastShowPrice'>
+      <view class='lastPrice'>实际单价 <view class='bright'>10元</view></view>
+      <view class='cofirmUnit' catchtap='cofirmUnit'>确认</view>
     </view>
   </view> 
 </view>

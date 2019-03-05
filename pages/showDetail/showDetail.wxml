@@ -1,5 +1,5 @@
 <!--pages/showDetail/showDetail.wxml 内容详情页-->
-<view catchtouchend='moveEnd'>
+<view catchtouchend='moveEnd' class='content_detail'>
   <view class='nav' style='height:{{navH}}px;background:{{navFade}}' >
     <view class='nav-title'>
       <image src='../../imgs/back.png' mode='aspectFit' class='back' bindtap='navBack'></image> 
@@ -7,9 +7,43 @@
   </view>
   <scroll-view class='scrollBox' scroll-with-animation scroll-y style='height:{{windowHeight}}px' scroll-top="{{scrollTop}}" bindscroll="onScrollView">
     <!-- 正文 --> 
-    <image class='personShow' src='./../../imgs/mes.jpg'></image>
-    <view>
-      
+    <view><image class='personShow' src='./../../imgs/mes.jpg'></image></view>
+    <view class='personInfo detailLayout'>
+      <view class='personInfo_showBox'>
+        <image class='midHeadImg'  src='../../imgs/head.jpg'></image>
+        <view class='personInfo_intro'>
+          <view>Ren.</view>
+          <view>26</view>
+        </view>
+        <view class='follow'>关注</view>
+      </view>
+      <view class='person_intro'>晚上不是很想做饭，</view>
+      <view class='person_address'>
+        <view>地点：成都</view>
+        <view class='receiptTime'>周一至周日随时可接单</view>
+      </view>
+      <view>
+        <!-- <view>评论</view> -->
+        <view class='comment_view'> 
+          <image class='midHeadImg'  src='../../imgs/head.jpg'></image>
+          <input class='comment_input' placeholder='填写评论...'></input>
+        </view>
+        <view class='comment_ctn_box'>
+          <view class='comment_ctn_list'>
+              <image></image>
+              <view>Name</view>
+              <view>ctn</view>
+              <view>12小时</view>
+          </view>
+        </view>
+      </view>
     </view>  
   </scroll-view>
+  <view class='btmFixed'>
+    <view>送礼物</view>
+    <view>聊天</view>
+    <view>评论</view>
+    <view>点赞</view>
+    <view>立即下单</view>
+  </view>
 </view>
