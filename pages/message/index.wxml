@@ -1,2 +1,3 @@
 <!--pages/message/index.wxml-->
+<app-header titleText="我的" backBtn='{{false}}'></app-header>
 <text>pages/message/index.wxml</text>

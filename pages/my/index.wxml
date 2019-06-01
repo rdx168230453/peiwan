@@ -1,4 +1,5 @@
 <!--pages/my/index.wxml-->
+<app-header titleText="我的" backBtn='{{false}}'></app-header>
 <view class='myIndex'>
   <view class='myIndex_info hr'>
     <view><open-data type="userNickName"></open-data></view>

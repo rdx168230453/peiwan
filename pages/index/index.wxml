@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<app-header titleText="" backBtn='{{false}}'></app-header>
 <view class="container">
     <view class='tabText'>
       <view bindtap='indexTab' class="tab_item {{currentTab == '0'?'currentTab':''}}" data-index='0'>关注</view>

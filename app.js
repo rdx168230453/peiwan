@@ -10,8 +10,7 @@ App({
       success: res => {
         //导航高度
         this.globalData.navHeight = res.statusBarHeight + 46;
-      }, fail(err) {
-        console.log(err);
+        this.globalData.systemInfo = res
       }
     })
     var that = this
@@ -66,6 +65,7 @@ App({
     appId:'wx1d21ec5801a949a9',
     secret:'0120cfe4a748562dcfcc30579283a7e3',
     server:'http://127.0.0.1:5051/app/',
-    navHeight:''
+    navHeight:0,
+    systemInfo:{},
   }
 })

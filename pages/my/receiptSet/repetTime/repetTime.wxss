@@ -1,0 +1,29 @@
+/* pages/my/receiptSet/repetTime/repetTime.wxss */
+page{
+  height: 100%;
+  overflow: hidden;
+  background: #e9e9e9;
+}
+.repetView{
+  margin-top: 20rpx;
+  background: #fff;
+}
+.weekLabel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 40rpx;
+  height: 120rpx;
+  border-bottom:1px solid #ececec;
+  font-size: 34rpx;
+  letter-spacing: 0.3px;
+}
+.weekLabel checkbox{
+  transform: scale(0.8) 
+}
+.saveWeek{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  letter-spacing: 0.3px;
+}

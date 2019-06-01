@@ -6,16 +6,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navH:'',
-    navFade:''
+    navH:0,
+    navFade:'',
+    scrollTop: 0,
+    scroll:0,
+    windowHeight:0,
+    imgHeight: 0,
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //保存状态栏和屏幕信息
     this.setData({
       navH: App.globalData.navHeight,
-      imgHeight:''
+      windowHeight: App.globalData.systemInfo.windowHeight
     })
   },
 
@@ -39,16 +44,41 @@ Page({
   onShow: function () {
 
   },
-  onPageScroll: function (e) {
-    //如果滚动不在范围内，return
-    if (e.scrollTop > this.data.imgHeight - App.globalData.navHeight) return false
+  //监听滚动条
+  onScrollView(e){
+    var scrollTop = e.detail.scrollTop
+    var navHeight = this.data.navH
+    var imgHeight = this.data.imgHeight
+    if (scrollTop > imgHeight- navHeight ) return false
     //在范围内，添加透明度
-    if (this.data.imgHeight - App.globalData.navHeight >= e.scrollTop){
-      var opacity = Math.floor(e.scrollTop / (this.data.imgHeight - App.globalData.navHeight) * 100) / 100
+    if (imgHeight - navHeight >= scrollTop){
+      var opacity = scrollTop / (imgHeight - navHeight)
       this.setData({
-        navFade: "rgba(255,255,255," + opacity +")"
+        navFade: "rgba(255,255,255," + opacity +")",
+        scroll: scrollTop
       })
     }
+  },
+  moveEnd(){
+    var scroll = this.data.scroll
+    if (scroll < (this.data.imgHeight - App.globalData.navHeight) / 2 ){
+      console.log('scrollTop')
+      this.setData({
+        scrollTop:0,
+        navFade:"rgba(255,255,255,0)"
+      })
+    }
+    if (scroll >= (this.data.imgHeight - App.globalData.navHeight) / 2) {
+      this.setData({
+        scrollTop: this.data.imgHeight - App.globalData.navHeight,
+        navFade: "rgba(255,255,255,1)"
+      })
+    }
+  },
+  navBack(){
+    wx.navigateBack({
+      delta:1
+    })
   },
   /**
    * 生命周期函数--监听页面隐藏
