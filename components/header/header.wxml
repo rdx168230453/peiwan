@@ -1,0 +1,7 @@
+<!--component/hyalineHead/hyalineHead.wxml-->
+<view class='nav bg-white' style='height:{{navH}}px'>
+  <view class='nav-title'>
+    <view>{{titleText}}</view>
+    <image wx:if='{{backBtn}}' src='../../imgs/back.png' mode='aspectFit' class='back' bindtap='navBack'></image> 
+  </view>
+</view>

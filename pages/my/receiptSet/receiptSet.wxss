@@ -2,32 +2,53 @@
 page{
   background: #e9e9e9;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.receiptSetting{
+ 
 }
 .setItemBox{
   background: #fff;
   margin-top: 20rpx;
-  padding: 20rpx;
+  padding:0 20rpx;
 }
 .setswitch{
-  transform: scale(0.7)
+  transform: scale(0.7) translateX(40rpx)
 }
 .listItemBox{
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 34rpx;
-  height: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
 }
 .mt20{
   margin-top: 20px
 }
-
+.arrowIcon_box{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.arrow_icon{
+  margin-left: 5rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+.repetSetting{
+  font-size: 30rpx;
+}
+.weekItems{
+  margin-left: 10rpx;
+}
 /* 弹窗 */
 .DialogBg{
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   z-index: 999;
   background: rgba(0, 0, 0, 0.4);

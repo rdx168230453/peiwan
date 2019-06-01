@@ -9,11 +9,8 @@ App({
     wx.getSystemInfo({
       success: res => {
         //导航高度
-        console.log(res)
         this.globalData.navHeight = res.statusBarHeight + 46;
         this.globalData.systemInfo = res
-      }, fail(err) {
-        console.log(err);
       }
     })
     var that = this

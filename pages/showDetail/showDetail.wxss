@@ -42,11 +42,14 @@
   height: 100rpx;
   border-radius: 15rpx;
 }
-.detailLayout{
+/* .detailLayout{
   padding:0 40rpx;
-}
+} */
 .personInfo{
   font-size:34rpx;
+}
+.personInfo > view{
+  padding: 0 40rpx;
 }
 .personInfo_showBox{
   display: flex;
@@ -98,4 +101,11 @@
 .btmFixed > view{
   flex: 1;
   text-align: center;
+}
+.detail_small_box{
+  margin-top: 20rpx;
+}
+.group_line{
+  height: 20rpx;
+  background: #ccc;
 }

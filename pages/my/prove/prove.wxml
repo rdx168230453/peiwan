@@ -1,4 +1,5 @@
 <!--pages/my/prove/prove.wxml-->
+<app-header titleText="技能认证" ></app-header>
 <view class='provePage'>
   <view class='provePage_box box_flex rank_box'>
     <view>段位提交</view>

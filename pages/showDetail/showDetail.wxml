@@ -8,7 +8,7 @@
   <scroll-view class='scrollBox' scroll-with-animation scroll-y style='height:{{windowHeight}}px' scroll-top="{{scrollTop}}" bindscroll="onScrollView">
     <!-- 正文 --> 
     <view><image class='personShow' src='./../../imgs/mes.jpg'></image></view>
-    <view class='personInfo detailLayout'>
+    <view class='personInfo'>
       <view class='personInfo_showBox'>
         <image class='midHeadImg'  src='../../imgs/head.jpg'></image>
         <view class='personInfo_intro'>
@@ -21,6 +21,14 @@
       <view class='person_address'>
         <view>地点：成都</view>
         <view class='receiptTime'>周一至周日随时可接单</view>
+      </view>
+      <view class='group_line'></view>
+      <view class='detail_small_box'>
+        <view >
+          <view>动态</view>
+          <view>查看全部</view>
+        </view>
+        <view>动态</view>
       </view>
       <view>
         <!-- <view>评论</view> -->

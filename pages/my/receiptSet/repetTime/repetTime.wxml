@@ -1,0 +1,11 @@
+<!--pages/my/receiptSet/repetTime/repetTime.wxml-->
+<app-header titleText="重复" ></app-header>
+<view class='repetView'>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="weekLabel checkbox" wx:for="{{items}}">
+      {{item.value}}
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" bindchange="checkboxChange"/>
+    </label>
+  </checkbox-group>
+  <!-- <view class='saveWeek' catchtap='saveWeek'>保存</view> -->
+</view>

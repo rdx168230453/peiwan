@@ -1,4 +1,5 @@
 <!--pages/my/receiptSet/receiptSet.wxml 接单设置-->
+<app-header titleText="接单设置" ></app-header>
 <view class='receiptSetting'>
   <view class='pickBox setItemBox'>
     <view class='listItemBox'>
@@ -7,31 +8,39 @@
     </view>
     <view class='listItemBox'>
       <view>单价/每次</view>
-      <view catchtap='pickUnit'>10u</view>
+      <view catchtap='pickUnit' class='unitView arrowIcon_box'>10元<image class='arrow_icon' src='../../../imgs/icon_jiantou.png'></image></view>
     </view>
   </view>
   <view class='setItemBox listItemBox'>
-      <view>主接品类</view>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
-        <view class="picker">{{rankAry[index]}}</view>
-      </picker>
-    </view>
+    <view>主接品类</view>
+    <picker bindchange="bindPickerChange" range="{{classAry}}" value="{{classIndex}}">
+      <view class="picker arrowIcon_box">
+        {{classAry[classIndex]}}
+        <image class='arrow_icon' src='../../../imgs/icon_jiantou.png'></image>
+      </view>
+    </picker>
+  </view>
   <view class='setItemBox'>
     <view class='listItemBox'>
       <view>抢单/派单</view>
-      <switch class='setswitch' checked bindchange="switch1Change" />
+      <switch class='setswitch' checked="{{dispatch}}" bindchange="switchDispatch" />
     </view>
-    <view class='listItemBox'>
-      <view>时间</view>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
-        <view class="picker">{{rankAry[index]}}</view>
+    <view class='listItemBox' wx:if='{{dispatch}}'>
+      <view>时间段</view>
+      <picker mode="multiSelector" bindchange="bindPickerChange" 
+      range="{{multiArray}}" value="{{multiIndex}}"  bindchange='bindMultiPickerChange'>
+        <view class="picker arrowIcon_box">
+          {{multiArray[0][multiIndex[0]]}}至{{multiArray[2][multiIndex[2]]}}
+        <image class='arrow_icon' src='../../../imgs/icon_jiantou.png'></image>
+        </view>
       </picker>
     </view>
-    <view class='listItemBox'>
+    <view class='listItemBox' wx:if='{{dispatch}}'>
       <view>周期</view>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{rankAry}}">
-        <view class="picker">{{rankAry[index]}}</view>
-      </picker>
+      <view catchtap='bindRepetSet' class='repetSetting arrowIcon_box '>
+        <view class='weekItems' wx:for="{{items}}" wx:if="{{item.checked}}">{{item.value}}</view>
+        <image class='arrow_icon' src='../../../imgs/icon_jiantou.png'></image>
+      </view>
     </view>
   </view>
   <!-- <view class='setItemBox listItemBox'>
@@ -39,7 +48,7 @@
     <switch class='setswitch' checked bindchange="switch1Change" />
   </view> -->
   <!-- 弹窗 -->
-  <view class='DialogBg' animation="{{dialogBg}}"></view>
+  <view class='DialogBg' wx:if="{{showModel}}"></view>
   <view class='unitPriceModel' animation="{{dialogCtn}}">   
     <view class='pieceLayer'>
       <view class='unitPrice_title'>价格</view>
