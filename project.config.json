@@ -9,11 +9,20 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"nodeModules": true
+		"nodeModules": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enhance": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.1",
-	"appid": "wx1d21ec5801a949a9",
+	"libVersion": "2.7.1",
+	"appid": "wx5efed93eae946e81",
 	"projectname": "peiwan-app",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -23,6 +32,8 @@
 		"beforePreview": "",
 		"beforeUpload": ""
 	},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

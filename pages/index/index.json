@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "app-header": "/components/header/header"
+    "van-button":"/vant//button/index",
+    "van-search": "/vant/search/index"
   }
 }

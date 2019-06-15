@@ -6,7 +6,20 @@ Page({
   data: {
     currentTab:'1',
     duration:'500',// 动画时长,
-    listAry:[]
+    listAry:[
+      {
+        skillimg:'../../imgs/ankatong.jpeg'
+      },
+      {
+        skillimg: '../../imgs/mes.jpg'
+      },
+      {
+        skillimg: '../../imgs/mes.jpg'
+      },
+      {
+        skillimg: '../../imgs/mes.jpg'
+      }
+    ]
   },
   onLoad: function () {
     var that = this;

@@ -11,22 +11,21 @@
 .tabText .tab_item{
   margin-left: 20rpx;
 }
-.indexSearch{
-  width: 100%;
+.searchBgrun{
+  /* align-items: center */
+  border-radius: 30rpx;
 }
-.indexSearch input{
-  padding:0px 20px;
-  height: 80rpx;
-  line-height: 80px;
+.followSubmit{
+  width: 200rpx;
+  margin-right: 20rpx;
 }
 .tabSwiper{
   width: 100%;
   
 }
 .classify_box{
-  width:100%;
-  padding: 0 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-size: 30rpx;
 }
@@ -38,7 +37,7 @@
   display: flex;
   justify-content:space-between;
   flex-wrap:wrap;
-  padding:30rpx;
+  padding: 20rpx 32rpx;
   font-size:26rpx;
 }
 .index_list_item{
@@ -61,7 +60,7 @@
   height: 100%;
 }
 swiper{
-  height: 785rpx;
+  flex-grow: 1;
 }
 .item_info_box{
   padding:20rpx;
@@ -88,6 +87,7 @@ swiper{
 }
 .info_data_style{
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
   align-items: center;
 }

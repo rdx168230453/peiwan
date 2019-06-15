@@ -1,15 +1,19 @@
 /**app.wxss**/
-.container {
+@import "vant/common/index.wxss";
+page{
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  /* padding: 200rpx 0; */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   box-sizing: border-box;
 } 
-.boxMarginTop{
-  margin-top: 40rpx
+.boxPadding{
+  padding: 20rpx 32rpx;
 }
 .smallHeadImg{
   width: 50rpx;
@@ -23,7 +27,6 @@
   height: 20rpx;
   background:#eee;
 }
-/* background:#e9e9e9 */
 .icon_arrow{
   width: 25rpx;
   height: 25rpx;

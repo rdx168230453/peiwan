@@ -49,5 +49,10 @@
         "selectedIconPath": "imgs/active_icon_root.png"
       }
     ]
-  }
+  },
+  "usingComponents": {
+    "app-header": "/components/header/header",
+    "van-icon": "/vant/icon/index"
+  },
+  "sitemapLocation": "sitemap.json"
 }

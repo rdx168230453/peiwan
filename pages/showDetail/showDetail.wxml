@@ -23,35 +23,27 @@
         <view class='receiptTime'>周一至周日随时可接单</view>
       </view>
       <view class='group_line'></view>
-      <view class='detail_small_box'>
-        <view >
-          <view>动态</view>
-          <view>查看全部</view>
-        </view>
-        <view>动态</view>
-      </view>
-      <view>
-        <!-- <view>评论</view> -->
-        <view class='comment_view'> 
-          <image class='midHeadImg'  src='../../imgs/head.jpg'></image>
-          <input class='comment_input' placeholder='填写评论...'></input>
-        </view>
-        <view class='comment_ctn_box'>
-          <view class='comment_ctn_list'>
-              <image></image>
-              <view>Name</view>
-              <view>ctn</view>
-              <view>12小时</view>
+      <van-tabs active="{{ active }}" bind:change="onChange" 
+        color="#1e99ff" swipeable>
+        <van-tab title="动态">
+          <view class='boxPadding '>
+            <view class='detial_title'>最新动态走一走</view>
+            <view>视频</view>
+            <view>
+              <view>11小时之前</view>
+              <view>评论</view>
+              <view>点赞</view>
+            </view>
           </view>
-        </view>
-      </view>
+        </van-tab>
+        <van-tab title="技能">技能</van-tab>
+      </van-tabs>
     </view>  
   </scroll-view>
-  <view class='btmFixed'>
-    <view>送礼物</view>
+  <!-- <view class='btmFixed'>
     <view>聊天</view>
     <view>评论</view>
     <view>点赞</view>
     <view>立即下单</view>
-  </view>
+  </view> -->
 </view>
